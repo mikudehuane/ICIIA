@@ -1,0 +1,320 @@
+.
+├── ImageNet -> /root/data/ImageNet/
+├── inaturalist -> /root/data/inaturalist/
+├── LEAF
+│   ├── data
+│   │   ├── celeba
+│   │   │   ├── data -> /root/LEAF/data/celeba/data/
+│   │   │   ├── preprocess
+│   │   │   │   └── metadata_to_json.py
+│   │   │   ├── preprocess.sh
+│   │   │   ├── README.md
+│   │   │   └── stats.sh
+│   │   ├── femnist
+│   │   │   ├── data -> /root/LEAF/data/femnist/data/
+│   │   │   ├── preprocess
+│   │   │   │   ├── data_to_json.py
+│   │   │   │   ├── data_to_json.sh
+│   │   │   │   ├── get_data.sh
+│   │   │   │   ├── get_file_dirs.py
+│   │   │   │   ├── get_hashes.py
+│   │   │   │   ├── group_by_writer.py
+│   │   │   │   └── match_hashes.py
+│   │   │   ├── preprocess.sh
+│   │   │   ├── README.md
+│   │   │   └── stats.sh
+│   │   ├── __init__.py
+│   │   ├── reddit
+│   │   │   ├── build_vocab.py
+│   │   │   ├── README.md
+│   │   │   └── source
+│   │   │       ├── clean_raw.py
+│   │   │       ├── delete_small_users.py
+│   │   │       ├── get_json.py
+│   │   │       ├── get_raw_users.py
+│   │   │       ├── merge_raw_users.py
+│   │   │       ├── preprocess.py
+│   │   │       ├── reddit_utils.py
+│   │   │       └── run_reddit.sh
+│   │   ├── sent140
+│   │   │   ├── preprocess
+│   │   │   │   ├── combine_data.py
+│   │   │   │   ├── data_to_json.py
+│   │   │   │   ├── data_to_json.sh
+│   │   │   │   └── get_data.sh
+│   │   │   ├── preprocess.sh
+│   │   │   ├── README.md
+│   │   │   └── stats.sh
+│   │   ├── shakespeare
+│   │   │   ├── preprocess
+│   │   │   │   ├── data_to_json.sh
+│   │   │   │   ├── gen_all_data.py
+│   │   │   │   ├── get_data.sh
+│   │   │   │   ├── preprocess_shakespeare.py
+│   │   │   │   └── shake_utils.py
+│   │   │   ├── preprocess.sh
+│   │   │   ├── README.md
+│   │   │   └── stats.sh
+│   │   ├── synthetic
+│   │   │   ├── data_generator.py
+│   │   │   ├── main.py
+│   │   │   ├── preprocess.sh
+│   │   │   ├── README.md
+│   │   │   └── stats.sh
+│   │   └── utils
+│   │       ├── constants.py
+│   │       ├── __init__.py
+│   │       ├── merge_data.py
+│   │       ├── merge_index.py
+│   │       ├── preprocess.sh
+│   │       ├── __pycache__
+│   │       │   ├── constants.cpython-37.pyc
+│   │       │   └── util.cpython-37.pyc
+│   │       ├── remove_users.py
+│   │       ├── sample.py
+│   │       ├── split_client_data.py
+│   │       ├── split_data.py
+│   │       ├── stats.py
+│   │       └── util.py
+│   ├── docs
+│   │   ├── build
+│   │   │   └── html
+│   │   │       ├── additional.html
+│   │   │       ├── autodoc
+│   │   │       │   ├── baseline_constants.html
+│   │   │       │   ├── client.html
+│   │   │       │   ├── main.html
+│   │   │       │   ├── metrics.html
+│   │   │       │   ├── model.html
+│   │   │       │   ├── modules.html
+│   │   │       │   ├── server.html
+│   │   │       │   └── utils.html
+│   │   │       ├── citations.html
+│   │   │       ├── contact.html
+│   │   │       ├── err.log
+│   │   │       ├── genindex.html
+│   │   │       ├── _images
+│   │   │       │   ├── femnist_75_thresh.png
+│   │   │       │   ├── leaf_rep_sent140.png
+│   │   │       │   ├── shake_small_weighted_test_acc.png
+│   │   │       │   └── shake_small_weighted_training_loss.png
+│   │   │       ├── index.html
+│   │   │       ├── install
+│   │   │       │   └── get_leaf.html
+│   │   │       ├── _modules
+│   │   │       │   ├── client.html
+│   │   │       │   ├── index.html
+│   │   │       │   ├── main.html
+│   │   │       │   ├── metrics
+│   │   │       │   │   ├── visualization_utils.html
+│   │   │       │   │   └── writer.html
+│   │   │       │   ├── model.html
+│   │   │       │   ├── server.html
+│   │   │       │   └── utils
+│   │   │       │       ├── language_utils.html
+│   │   │       │       ├── model_utils.html
+│   │   │       │       └── tf_utils.html
+│   │   │       ├── objects.inv
+│   │   │       ├── out.log
+│   │   │       ├── py-modindex.html
+│   │   │       ├── search.html
+│   │   │       ├── searchindex.js
+│   │   │       ├── _sources
+│   │   │       │   ├── additional.rst.txt
+│   │   │       │   ├── autodoc
+│   │   │       │   │   ├── baseline_constants.rst.txt
+│   │   │       │   │   ├── client.rst.txt
+│   │   │       │   │   ├── main.rst.txt
+│   │   │       │   │   ├── metrics.rst.txt
+│   │   │       │   │   ├── model.rst.txt
+│   │   │       │   │   ├── modules.rst.txt
+│   │   │       │   │   ├── server.rst.txt
+│   │   │       │   │   └── utils.rst.txt
+│   │   │       │   ├── citations.rst.txt
+│   │   │       │   ├── contact.rst.txt
+│   │   │       │   ├── index.rst.txt
+│   │   │       │   ├── install
+│   │   │       │   │   └── get_leaf.md.txt
+│   │   │       │   └── tutorials
+│   │   │       │       ├── femnist-md.md.txt
+│   │   │       │       ├── index.rst.txt
+│   │   │       │       ├── sent140-md.md.txt
+│   │   │       │       └── shakespeare-md.md.txt
+│   │   │       ├── _static
+│   │   │       │   ├── ajax-loader.gif
+│   │   │       │   ├── basic.css
+│   │   │       │   ├── comment-bright.png
+│   │   │       │   ├── comment-close.png
+│   │   │       │   ├── comment.png
+│   │   │       │   ├── css
+│   │   │       │   │   ├── badge_only.css
+│   │   │       │   │   └── theme.css
+│   │   │       │   ├── customheader.css
+│   │   │       │   ├── doctools.js
+│   │   │       │   ├── documentation_options.js
+│   │   │       │   ├── down.png
+│   │   │       │   ├── down-pressed.png
+│   │   │       │   ├── file.png
+│   │   │       │   ├── fonts
+│   │   │       │   │   ├── fontawesome-webfont.eot
+│   │   │       │   │   ├── fontawesome-webfont.svg
+│   │   │       │   │   ├── fontawesome-webfont.ttf
+│   │   │       │   │   ├── fontawesome-webfont.woff
+│   │   │       │   │   ├── fontawesome-webfont.woff2
+│   │   │       │   │   ├── Inconsolata-Bold.ttf
+│   │   │       │   │   ├── Inconsolata-Regular.ttf
+│   │   │       │   │   ├── Inconsolata.ttf
+│   │   │       │   │   ├── Lato
+│   │   │       │   │   │   ├── lato-bold.eot
+│   │   │       │   │   │   ├── lato-bolditalic.eot
+│   │   │       │   │   │   ├── lato-bolditalic.ttf
+│   │   │       │   │   │   ├── lato-bolditalic.woff
+│   │   │       │   │   │   ├── lato-bolditalic.woff2
+│   │   │       │   │   │   ├── lato-bold.ttf
+│   │   │       │   │   │   ├── lato-bold.woff
+│   │   │       │   │   │   ├── lato-bold.woff2
+│   │   │       │   │   │   ├── lato-italic.eot
+│   │   │       │   │   │   ├── lato-italic.ttf
+│   │   │       │   │   │   ├── lato-italic.woff
+│   │   │       │   │   │   ├── lato-italic.woff2
+│   │   │       │   │   │   ├── lato-regular.eot
+│   │   │       │   │   │   ├── lato-regular.ttf
+│   │   │       │   │   │   ├── lato-regular.woff
+│   │   │       │   │   │   └── lato-regular.woff2
+│   │   │       │   │   ├── Lato-Bold.ttf
+│   │   │       │   │   ├── Lato-Regular.ttf
+│   │   │       │   │   ├── RobotoSlab
+│   │   │       │   │   │   ├── roboto-slab-v7-bold.eot
+│   │   │       │   │   │   ├── roboto-slab-v7-bold.ttf
+│   │   │       │   │   │   ├── roboto-slab-v7-bold.woff
+│   │   │       │   │   │   ├── roboto-slab-v7-bold.woff2
+│   │   │       │   │   │   ├── roboto-slab-v7-regular.eot
+│   │   │       │   │   │   ├── roboto-slab-v7-regular.ttf
+│   │   │       │   │   │   ├── roboto-slab-v7-regular.woff
+│   │   │       │   │   │   └── roboto-slab-v7-regular.woff2
+│   │   │       │   │   ├── RobotoSlab-Bold.ttf
+│   │   │       │   │   └── RobotoSlab-Regular.ttf
+│   │   │       │   ├── images
+│   │   │       │   │   ├── femnist_75_thresh.png
+│   │   │       │   │   ├── leaf_rep_sent140.png
+│   │   │       │   │   ├── shake_small_weighted_test_acc.png
+│   │   │       │   │   └── shake_small_weighted_training_loss.png
+│   │   │       │   ├── jquery-3.2.1.js
+│   │   │       │   ├── jquery.js
+│   │   │       │   ├── js
+│   │   │       │   │   ├── modernizr.min.js
+│   │   │       │   │   └── theme.js
+│   │   │       │   ├── language_data.js
+│   │   │       │   ├── minus.png
+│   │   │       │   ├── plus.png
+│   │   │       │   ├── pygments.css
+│   │   │       │   ├── searchtools.js
+│   │   │       │   ├── underscore-1.3.1.js
+│   │   │       │   ├── underscore.js
+│   │   │       │   ├── up.png
+│   │   │       │   ├── up-pressed.png
+│   │   │       │   └── websupport.js
+│   │   │       └── tutorials
+│   │   │           ├── femnist-md.html
+│   │   │           ├── index.html
+│   │   │           ├── sent140-md.html
+│   │   │           └── shakespeare-md.html
+│   │   ├── CNAME
+│   │   ├── _config.yml
+│   │   ├── doc-dev-requirements.txt
+│   │   ├── gen_autodoc_stubs.sh
+│   │   ├── index.html
+│   │   ├── make.bat
+│   │   ├── Makefile
+│   │   ├── README.md
+│   │   ├── source
+│   │   │   ├── autodoc
+│   │   │   │   ├── baseline_constants.rst
+│   │   │   │   ├── client.rst
+│   │   │   │   ├── main.rst
+│   │   │   │   ├── metrics.rst
+│   │   │   │   ├── model.rst
+│   │   │   │   ├── modules.rst
+│   │   │   │   ├── server.rst
+│   │   │   │   └── utils.rst
+│   │   │   ├── citations.rst
+│   │   │   ├── conf.py
+│   │   │   ├── contact.rst
+│   │   │   ├── index.rst
+│   │   │   ├── install
+│   │   │   │   └── get_leaf.md
+│   │   │   ├── _static
+│   │   │   │   ├── customheader.css
+│   │   │   │   └── images
+│   │   │   │       ├── femnist_75_thresh.png
+│   │   │   │       ├── leaf_rep_sent140.png
+│   │   │   │       ├── shake_small_weighted_test_acc.png
+│   │   │   │       └── shake_small_weighted_training_loss.png
+│   │   │   └── tutorials
+│   │   │       ├── femnist-md.md
+│   │   │       ├── index.rst
+│   │   │       ├── sent140-md.md
+│   │   │       └── shakespeare-md.md
+│   │   └── webpage
+│   │       ├── assets
+│   │       │   ├── header-basic.css
+│   │       │   └── main.css
+│   │       ├── icon.png
+│   │       └── images
+│   │           ├── celeba_hist.png
+│   │           ├── celeba.png
+│   │           ├── femnist_hist.png
+│   │           ├── femnist.png
+│   │           ├── reddit_hist.png
+│   │           ├── reddit.png
+│   │           ├── shakespeare_hist.png
+│   │           ├── shakespeare.png
+│   │           ├── synthetic_hist.png
+│   │           ├── synthetic.png
+│   │           ├── twitter_hist.png
+│   │           └── twitter.png
+│   ├── LICENSE.md
+│   ├── models
+│   │   ├── baseline_constants.py
+│   │   ├── celeba
+│   │   │   └── cnn.py
+│   │   ├── client.py
+│   │   ├── femnist
+│   │   │   └── cnn.py
+│   │   ├── main.py
+│   │   ├── metrics
+│   │   │   ├── __init__.py
+│   │   │   ├── metrics.ipynb
+│   │   │   ├── visualization_utils.py
+│   │   │   └── writer.py
+│   │   ├── model.py
+│   │   ├── README.md
+│   │   ├── reddit
+│   │   │   └── stacked_lstm.py
+│   │   ├── sent140
+│   │   │   ├── bag_log_reg.py
+│   │   │   ├── get_embs.py
+│   │   │   ├── get_embs.sh
+│   │   │   └── stacked_lstm.py
+│   │   ├── server.py
+│   │   ├── shakespeare
+│   │   │   └── stacked_lstm.py
+│   │   ├── synthetic
+│   │   │   └── log_reg.py
+│   │   └── utils
+│   │       ├── args.py
+│   │       ├── __init__.py
+│   │       ├── language_utils.py
+│   │       ├── model_utils.py
+│   │       └── tf_utils.py
+│   ├── paper_experiments
+│   │   ├── femnist.sh
+│   │   ├── sent140.sh
+│   │   └── shakespeare.sh
+│   ├── README.md
+│   └── requirements.txt
+├── tree.txt
+└── UCF-101 -> /root/data/UCF-101/
+- [error opening dir]
+
+60 directories, 256 files
