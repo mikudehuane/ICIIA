@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-# @Time    : 2022/8/13 00:54
-# @Author  : islander
-# @File    : head_per.py
-# @Software: PyCharm
-
 from __future__ import division
 
 import argparse
@@ -188,7 +182,6 @@ def main():
         log_results('epoch {epoch} testset, {metrics}', _metric_vals_test, 'test')
         log_results('epoch {epoch} valset, {metrics}', _metric_vals_val, 'val')
 
-        # 总评估结果
         current_meta['testset'] = deepcopy(_metric_vals_test)
         current_meta['valset'] = deepcopy(_metric_vals_val)
         current_meta['epoch'] = epoch_num

@@ -167,7 +167,7 @@ def parse_head_dataset(args: argparse.Namespace) -> Tuple[DataLoader, DataLoader
 
         # deal with prompt tuning
         if 'top_layer' in args.__dict__ and args.top_layer == 'prompt':
-            # 合并 train val indices
+            # train val indices
             assert user_train_indices.keys() == user_val_indices.keys(), "train and val indices must have same keys"
             assert user_train_indices.keys() == user_test_indices.keys(), "train and test indices must have same keys"
             user_full_indices = OrderedDict()

@@ -64,23 +64,21 @@ class VideoLoader(object):
     def _load_video(self, video_path):
         capture = cv2.VideoCapture(video_path)
 
-        # 视频元信息
         frame_count = int(capture.get(cv2.CAP_PROP_FRAME_COUNT))
         frame_width = int(capture.get(cv2.CAP_PROP_FRAME_WIDTH))
         frame_height = int(capture.get(cv2.CAP_PROP_FRAME_HEIGHT))
 
-        # 确定帧提取频率
         assert frame_count >= self.min_frame_count
         extract_freq = self.extract_freq
         while frame_count // extract_freq <= self.min_frame_count:
             extract_freq -= 1
 
-        frame_idx = 0  # 帧率 index
-        retaining = True  # 是否还有剩余的帧
-        frames = []  # 读出的 frame
+        frame_idx = 0
+        retaining = True
+        frames = []
         while frame_idx < frame_count and retaining:
             retaining, frame = capture.read()
-            if frame is None:  # 没有读到帧
+            if frame is None:
                 continue
 
             if frame_idx % extract_freq == 0:
